@@ -39,3 +39,9 @@ main: async function() {
 }
 
 dApp.main();
+
+$(document).ready(function(){
+    $("button").click(function(){
+      + $("#test").val());
+    });
+  });
