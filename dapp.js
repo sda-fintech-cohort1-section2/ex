@@ -44,7 +44,8 @@ dApp.main();
 
 $(document).ready(function () {
     $("#submit").on('click', function (event) {
-        dApp.setString($("#newStringInput").val());
-        M.toast({ html: "String updated!: $("#newStringInput").val()"})
+        alert("I am an alert box! val:  $("#newStringInput").val()");
+//         dApp.setString($("#newStringInput").val());
+//         M.toast({ html: "String updated!: $("#newStringInput").val()"})
     });
 }
