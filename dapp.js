@@ -13,13 +13,15 @@ main: async function() {
     return false;
   },
   
-  setString: async function() {
-      await this.simpleContract.methods.setString
+  setString: async function(newString) {
+      await this.simpleContract.methods.setString(newString).send({from: this.accounts[0]}).on("receipt", async (receipt) => {
+      M.toast({ html: "String updated!"});
+    });
     },
   getString: async function() {
-    },
-    
-    
+      result = await this.simpleContract.methods.getString().call();
+      M.toast({ html: "Your String is: ${result}"});
+  },
     if (!this.ethEnabled()) {
       alert("Please install MetaMask to use this dApp!");
     }
@@ -42,6 +44,6 @@ dApp.main();
 
 $(document).ready(function(){
     $("button").click(function(){
-      + $("#test").val());
+      dApp.setString($("#newStringInput").val());
     });
   });
