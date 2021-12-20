@@ -44,7 +44,6 @@ dApp.main();
 
 $(document).ready(function () {
     $("#submit").on('click', function (event) {
-        handleClick();
         dApp.setString($("#newStringInput").val());
         M.toast({ html: "String updated!: $("#newStringInput").val()"})
     });
