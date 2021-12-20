@@ -42,7 +42,9 @@
 
 // dApp.main();
 
-
+function buttonClick(){
+    alert("I am an alert box! val:  $("#newStringInput").val()");
+}
 
 
 // $(document).ready(function () {
