@@ -2,6 +2,7 @@ const contractAddress = "0x7a377fAd8c7dB341e662c93A79d0B0319DD3DaE8";
 
 const dApp = {
 main: async function() {
+    
     ethEnabled: function() {
     // If the browser has an Ethereum provider (MetaMask) installed
     if (window.ethereum) {
@@ -11,7 +12,12 @@ main: async function() {
     }
     return false;
   },
-    
+  
+  setString: async function() {
+      await this.simpleContract.methods.setString
+    },
+  getString: async function() {
+    },
     
     
     if (!this.ethEnabled()) {
