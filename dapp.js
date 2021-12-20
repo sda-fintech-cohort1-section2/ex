@@ -42,6 +42,7 @@
 
 // dApp.main();
 
+alert("Code entered.");
 function buttonClick(){
     alert("I am an alert box! val:  $("#newStringInput").val()");
 }
