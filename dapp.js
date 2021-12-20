@@ -2,6 +2,17 @@ const contractAddress = "0x7a377fAd8c7dB341e662c93A79d0B0319DD3DaE8";
 
 const dApp = {
 main: async function() {
+    ethEnabled: function() {
+    // If the browser has an Ethereum provider (MetaMask) installed
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum);
+      window.ethereum.enable();
+      return true;
+    }
+    return false;
+  },
+    
+    
     
     if (!this.ethEnabled()) {
       alert("Please install MetaMask to use this dApp!");
@@ -18,7 +29,7 @@ main: async function() {
       { defaultAccount: this.accounts[0] }
     );
     console.log("Contract object", this.simpleContract);
-    await this.updateUI();
+//     await this.updateUI();
 }
 
 dApp.main();
