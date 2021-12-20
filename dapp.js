@@ -37,7 +37,6 @@ main: async function() {
       { defaultAccount: this.accounts[0] }
     );
     console.log("Contract object", this.simpleContract);
-//     await this.updateUI();
 }
 
 dApp.main();
