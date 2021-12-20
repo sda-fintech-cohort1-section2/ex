@@ -42,8 +42,9 @@ main: async function() {
 
 dApp.main();
 
-$(document).ready(function(){
-    $("button").click(function(){
-      dApp.setString($("#newStringInput").val());
+$(document).ready(function () {
+    $("#submit").on('click', function (event) {
+        handleClick();
+        dApp.setString($("#newStringInput").val());
     });
-  });
+}
